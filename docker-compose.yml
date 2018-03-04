@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vsftpd:
+    build: .
+    ports:
+      - "21:21"
+      - "990:990"
+      - "21000-21010:21000-21010"
+    environment:
+      - MODE
+      - PASV_ADDRESS
