@@ -4,10 +4,9 @@ LABEL Description="vsftpd prepopulated image for testing"
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
-ENV LANG en_US.UTF-8
 
 # install packages
-RUN apt-get update && apt install -y vsftpd mc
+RUN apt-get update && apt-get install -y --no-install-recommends vsftpd && rm -rf /var/lib/apt/lists/*
 
 # create user one
 RUN useradd -m one && echo one:one | chpasswd
