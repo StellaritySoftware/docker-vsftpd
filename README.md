@@ -1,4 +1,4 @@
-# docker-vsftpd
+# docker-vsftpd [![Docker Build Status](https://img.shields.io/docker/build/stellarity/vsftpd.svg)](https://hub.docker.com/r/stellarity/vsftpd)
 
 ## Config
 `MODE`:
