@@ -18,11 +18,11 @@
 ## Run
 
 ```bash
-MODE=FTP PASV_ADDRESS=192.168.2.156 docker-compose up
+MODE=FTP PASV_ADDRESS=<your IP adress> docker-compose up
 ```
 
 ## Debug run
 
 ```bash
-docker-compose run --service-ports --rm -e PASV_ADDRESS=192.168.2.156 -e MODE=FTP vsftpd
+docker-compose run --service-ports --rm -e PASV_ADDRESS=<your IP adress> -e MODE=FTP vsftpd
 ```
