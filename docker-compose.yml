@@ -8,5 +8,6 @@ services:
       - "990:990"
       - "21000-21010:21000-21010"
     environment:
-      - MODE
-      - PASV_ADDRESS
+      - MODE=FTP
+      - PASV_ADDRESS=127.0.0.1
+      - PASV_PORT=21001
