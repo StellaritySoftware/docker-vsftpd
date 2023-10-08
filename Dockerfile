@@ -1,5 +1,4 @@
-FROM ubuntu:17.10
-MAINTAINER Sergey Podobry <sergey.podobry@stellaritysoftware.com>
+FROM ubuntu:22.04
 LABEL Description="vsftpd prepopulated image for testing"
 
 # install packages
@@ -25,5 +24,4 @@ ADD root /
 ENTRYPOINT ["/bootstrap.sh"]
 
 # expose ports
-EXPOSE 21 990 21000-21010
-
+EXPOSE 21 990 21000-21100

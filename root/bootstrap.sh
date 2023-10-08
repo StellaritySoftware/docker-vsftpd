@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "pasv_address=${PASV_ADDRESS}" >> /etc/vsftpd.conf
-echo "pasv_min_port=${PASV_PORT}" >> /etc/vsftpd.conf
-echo "pasv_max_port=${PASV_PORT}" >> /etc/vsftpd.conf
+echo "pasv_min_port=${PASV_MIN_PORT}" >> /etc/vsftpd.conf
+echo "pasv_max_port=${PASV_MAX_PORT}" >> /etc/vsftpd.conf
 
 
 echo "************************************"
@@ -10,7 +10,7 @@ echo "* Wellcome to VSFTPD docker image! *"
 echo "************************************"
 echo
 echo "Using passive address: ${PASV_ADDRESS}"
-echo "Using passive port: ${PASV_PORT}"
+echo "Using passive port: ${PASV_MIN_PORT}-${PASV_MAX_PORT}"
 echo "Mode is set to: ${MODE}"
 echo
 

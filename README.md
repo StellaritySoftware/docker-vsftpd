@@ -1,4 +1,6 @@
-# docker-vsftpd [![Docker Build Status](https://img.shields.io/docker/build/stellarity/vsftpd.svg)](https://hub.docker.com/r/stellarity/vsftpd)
+# docker-vsftpd
+
+[![Docker](https://github.com/StellaritySoftware/docker-vsftpd/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/StellaritySoftware/docker-vsftpd/actions/workflows/docker-publish.yml)
 
 # Introduction
 This ftp server uses virtual users with a shared home directory `/var/ftp/pub`.
@@ -9,9 +11,10 @@ This ftp server uses virtual users with a shared home directory `/var/ftp/pub`.
 
 | Variable | Description | Example |
 |--|--|--|
-| MODE | Set to FTP, FTPS or FTPES to specify SSL behaviour | FTP |
+| MODE | Set to FTP, FTPS or FTPES to specify SSL behavior | FTP |
 | PASV_ADDRESS | The server hostname or ip | demo |
-| PASV_PORT | Port for passive connections | 21001
+| PASV_MIN_PORT | Min port for passive connections | 21000 |
+| PASV_MAX_PORT | Max port for passive connections | 21100 |
 
 *Note: All variables are mandatory.*
 

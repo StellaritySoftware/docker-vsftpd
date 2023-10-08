@@ -2,12 +2,13 @@ version: '3'
 services:
   vsftpd:
     build: .
-    image: stellarity/vsftpd
+    image: StellaritySoftware/vsftpd
     ports:
       - "21:21"
       - "990:990"
-      - "21000-21010:21000-21010"
+      - "21000-21100:21000-21100"
     environment:
       - MODE=FTP
       - PASV_ADDRESS=127.0.0.1
-      - PASV_PORT=21001
+      - PASV_MIN_PORT=21000
+      - PASV_MAX_PORT=21100
